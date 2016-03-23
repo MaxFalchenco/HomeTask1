@@ -64,6 +64,8 @@ public class HomeTask1 {
     {
         double s;
         s = ( 1.0 / 2) * a * b;
+        if(s < 0)
+            s = 0;
         return s;
     }
 
@@ -110,7 +112,7 @@ public class HomeTask1 {
             while ( number < 0)
             {
 
-                sum = sum + (number % 10);
+                sum = sum - (number % 10);
                 number /= 10;
 
             }
@@ -132,16 +134,19 @@ public class HomeTask1 {
         int part_1 =1 ;
         int part_2 = 1;
         int part_3 = 0;
+        int count = 1;
 
         while ( till > part_3)
         {
 
             part_3 = part_1 + part_2;
+            count++;
 
             if ( part_3 > till )
             {
 
                 part_3 = part_2;
+                //count--;
                 break;
 
             }
@@ -151,7 +156,7 @@ public class HomeTask1 {
 
         }
 
-        return part_3;
+        return count;
     }
 
     /**
