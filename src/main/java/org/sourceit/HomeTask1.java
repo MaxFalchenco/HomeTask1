@@ -12,10 +12,7 @@ public class HomeTask1 {
      */
     public static boolean isEven(int number)
     {
-        if ( number % 2 == 0)
-            return true;
-        else
-            return false;
+        return number % 2 == 0;
     }
 
     /**
@@ -65,7 +62,7 @@ public class HomeTask1 {
         double s;
         s = ( 1.0 / 2) * a * b;
         if(s < 0)
-            s = 0;
+        { s = 0;}
         return s;
     }
 
@@ -107,8 +104,6 @@ public class HomeTask1 {
 
             }
         }else
-        if ( number < 0)
-        {
             while ( number < 0)
             {
 
@@ -116,7 +111,6 @@ public class HomeTask1 {
                 number /= 10;
 
             }
-        }
 
         return sum;
     }
@@ -144,11 +138,8 @@ public class HomeTask1 {
 
             if ( part_3 > till )
             {
-
                 part_3 = part_2;
-                //count--;
                 break;
-
             }
 
             part_1 = part_2;
@@ -181,23 +172,15 @@ public class HomeTask1 {
             ticket /= 10;
         }
 
-       /* for (i = 0; i<= 6 - 1 ; i++)
-             System.out.println(arr_ticket[i]);*/
-
         for (i = 0; i <= 2; i++)
             first_part = first_part + arr_ticket[i];
 
         for (i = 3; i <= 6 - 1; i++)
             second_part = second_part + arr_ticket[i];
 
-        /* System.out.println(" ");
-         System.out.println(" ");
-         System.out.println(first_part);
-         System.out.println(second_part);*/
-
         if (first_part == second_part)
             return true;
-        else
-            return false;
+
+        return false;
     }
 }
